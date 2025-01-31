@@ -26,173 +26,103 @@ const Home = () => {
   };
 
   return (
-    <div style={styles.container}>
-      {/* Top Section - Name & Title */}
-      {showWelcome && (
-        <motion.h1 variants={fadeInVariant} initial="hidden" animate="visible" style={styles.title}>
-          Amirali Mohseni
-        </motion.h1>
-      )}
-      <motion.p variants={fadeInVariant} initial="hidden" animate="visible" style={styles.subtitle}>
-        Software Engineer | AI Enthusiast
-      </motion.p>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+      style={styles.container}
+    >
+      <h2 style={styles.title}>Amirali Mohseni</h2>
+      <p style={styles.subtitle}>Software Engineer | AI Enthusiast</p>
 
-      {/* Main Content - Two Column Layout */}
+      {/* 🔥 Two-Column Layout for Desktop, Stacked for Mobile */}
       <div style={styles.contentContainer}>
-        {/* Left Column - About Me */}
-      <motion.div variants={fadeInVariant} initial="hidden" animate="visible" style={styles.leftColumn}>
-        <h3 style={styles.sectionTitle}>About Me</h3>
-
-        <div style={styles.gridContainer}>
-          {/* Row 1 */}
-          <div style={styles.gridItem}>
-            <h4>👨‍💻 Developer</h4>
-            <p>
-              Writing clean, efficient, and scalable code is more than just a skill—it's an obsession. 
-              Whether it's backend architecture or full-stack applications, I love making software work seamlessly.
-            </p>
-          </div>
-
-          <div style={styles.gridItem}>
-            <h4>🤖 AI Enthusiast</h4>
-            <p>
-              AI is redefining the world, and I’m building on that wave. From **ML models** to 
-              **NLP-powered applications**, I explore the intelligence behind the data.
-            </p>
-          </div>
-
-          {/* Row 2 */}
-          <div style={styles.gridItem}>
-            <h4>📊 Data Engineer</h4>
-            <p>
-            I enjoy working with data at scale, structuring efficient databases, and optimizing query performance. I’m always learning how to build better pipelines to make data more accessible and useful for decision-making.
-            </p>
-          </div>
-
-          <div style={styles.gridItem}>
-            <h4>🚀 Innovator</h4>
-            <p>
-            I love exploring new ideas and finding ways to bring them to life. Whether it’s through technology, AI, or entrepreneurship, I believe in continuous learning, experimenting, and improving with each project.
-            </p>
-          </div>
-
-        </div>
-      </motion.div>
-
-        {/* Right Column - Technical Expertise */}
-        <motion.div variants={fadeInVariant} initial="hidden" animate="visible" style={styles.rightColumn}>
-          <h3 style={styles.sectionTitle}>Technical Expertise</h3>
-          
-          <div style={styles.gridContainer}>
-            <div style={styles.gridItem}>
-              <h4>🖥️ Languages</h4>
-              <p>Python, JavaScript, TypeScript, SQL, Java, C++, C#</p>
-            </div>
-
-            <div style={styles.gridItem}>
-              <h4>⚙️ Frameworks</h4>
-              <p>React, Node.js, Django, Flask, Express</p>
-            </div>
-
-            <div style={styles.gridItem}>
-              <h4>☁️ Cloud & DevOps</h4>
-              <p>AWS, Firebase, Docker, Kubernetes</p>
-            </div>
-
-            <div style={styles.gridItem}>
-              <h4>📊 AI & Data</h4>
-              <p>Machine Learning, NLP, Data Engineering</p>
-            </div>
-
-            {/* <div style={styles.gridItem}>
-              <h4>📉 Trading & Finance</h4>
-              <p>Algorithmic Trading, Crypto Market Analytics</p>
-            </div>
-
-            <div style={styles.gridItem}>
-              <h4>📱 Web & Mobile</h4>
-              <p>Full-Stack Development, API Design</p>
-            </div> */}
-          </div>
+        <motion.div
+          variants={fadeInVariant}
+          initial="hidden"
+          animate="visible"
+          style={styles.card}
+        >
+          <h3 style={styles.sectionTitle}>About Me</h3>
+          <ul style={styles.list}>
+            <li><strong>👨‍💻 Developer:</strong> I enjoy building things that work efficiently and make a difference, whether it’s a backend system or a full-stack app.</li>
+            <li><strong>🤖 AI & Data:</strong> Curious about how AI shapes our world. I like working with ML models, automation, and making data useful.</li>
+            <li><strong>📊 Problem Solver:</strong> I focus on writing clean, structured code that improves performance and scales well.</li>
+            <li><strong>🚀 Always Learning:</strong> Technology evolves fast, and I try to keep up—exploring new tools, frameworks, and better ways to build.</li>
+          </ul>
         </motion.div>
 
+        <motion.div
+          variants={fadeInVariant}
+          initial="hidden"
+          animate="visible"
+          style={styles.card}
+        >
+          <h3 style={styles.sectionTitle}>Technical Expertise</h3>
+          <ul style={styles.list}>
+            <li><strong>🖥️ Languages:</strong> Python, JavaScript, TypeScript, SQL, Java, C++</li>
+            <li><strong>⚙️ Frameworks:</strong> React, Node.js, Django, Flask, Express</li>
+            <li><strong>☁️ Cloud & DevOps:</strong> AWS, Firebase, Docker, Kubernetes</li>
+            <li><strong>📊 AI & Data:</strong> Machine Learning, NLP, Data Engineering</li>
+          </ul>
+        </motion.div>
       </div>
 
-      {/* Contact & Lottie Animation */}
-      <motion.p variants={fadeInVariant} initial="hidden" animate="visible" style={styles.contact}>
-        Let's build something great together. Reach out & let's connect.
-      </motion.p>
 
       <motion.div variants={fadeInVariant} initial="hidden" animate="visible" style={styles.lottie}>
         <Lottie options={defaultOptions} height={100} width={100} />
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
-// Styled Components
+// Styles
 const styles = {
   container: {
-    textAlign: 'center',
-    padding: '50px',
-    backgroundColor: '#181818',
+    width: '100vw',
+    minHeight: '120vh', // ✅ Ensures proper spacing
+    backgroundColor: '#181818', // ✅ Matches Portfolio & Experience pages
     color: '#fff',
-    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    fontFamily: '"Inter", sans-serif',
+    justifyContent: 'flex-start',
+    paddingTop: '50px',
+    overflowX: 'hidden',
   },
   title: {
-    fontSize: '42px',
+    fontSize: '36px',
     fontWeight: 'bold',
-    letterSpacing: '1px',
-    color: '#f0f0f0',
+    marginBottom: '10px',
   },
   subtitle: {
-    fontSize: '20px',
+    fontSize: '18px',
     color: '#aaa',
-    fontWeight: '500',
-    marginBottom: '20px',
+    marginBottom: '30px',
+    maxWidth: '600px',
+    textAlign: 'center',
   },
   contentContainer: {
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    width: '80%',
+    flexWrap: 'wrap', // ✅ Ensures responsiveness
+    justifyContent: 'center',
+    gap: '20px',
+    width: '90%',
     maxWidth: '1100px',
-    marginTop: '30px',
   },
-  leftColumn: {
-    flex: 1,
-    textAlign: 'left',
-    padding: '20px',
+  card: {
     backgroundColor: '#222',
-    borderRadius: '10px',
-    boxShadow: '0 4px 10px rgba(255, 255, 255, 0.1)',
-    marginRight: '20px',
-  },
-  rightColumn: {
-    flex: 1,
-    textAlign: 'left',
     padding: '20px',
-    backgroundColor: '#222',
-    borderRadius: '10px',
-    boxShadow: '0 4px 10px rgba(255, 255, 255, 0.1)',
-    marginLeft: '20px',
+    borderRadius: '12px',
+    boxShadow: '0 6px 12px rgba(255, 255, 255, 0.1)',
+    width: '45%', // ✅ Even distribution
+    minWidth: '280px',
+    maxWidth: '500px',
+    textAlign: 'center',
   },
   sectionTitle: {
     fontSize: '22px',
     fontWeight: 'bold',
-    color: '#f0f0f0',
     marginBottom: '10px',
-  },
-  about: {
-    fontSize: '18px',
-    lineHeight: '1.6',
-    color: '#ddd',
-    marginBottom: '15px',
   },
   list: {
     listStyleType: 'none',
