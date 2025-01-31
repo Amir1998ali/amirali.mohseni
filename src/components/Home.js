@@ -4,14 +4,7 @@ import { motion } from 'framer-motion';
 import animationData from './animation.json';
 
 const Home = () => {
-  const [showWelcome, setShowWelcome] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowWelcome(true);
-    }, 800);
-    return () => clearTimeout(timer);
-  }, []);
 
   const defaultOptions = {
     loop: true,
