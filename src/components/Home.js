@@ -25,7 +25,7 @@ const Home = () => {
       style={styles.container}
     >
       <h2 style={styles.title}>Amirali Mohseni</h2>
-      <p style={styles.subtitle}>Software Engineer | AI Enthusiast</p>
+      <p style={styles.subtitle}>Software Engineer</p>
 
       {/* 🔥 Two-Column Layout for Desktop, Stacked for Mobile */}
       <div style={styles.contentContainer}>
