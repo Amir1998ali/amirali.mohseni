@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
 import Education from './components/Education';
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/experience" element={<Experience />} />
-        <Route path="/projects" element={<Projects />} />
         <Route path="/education" element={<Education />} />
       </Routes>
     </Router>
