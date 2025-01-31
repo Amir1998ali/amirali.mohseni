@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Lottie from 'react-lottie';
 import { motion } from 'framer-motion';
 import animationData from './animation.json';
