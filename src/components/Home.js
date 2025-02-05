@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import animationData from './animation.json';
 
 const Home = () => {
-
-
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -60,7 +58,8 @@ const Home = () => {
         </motion.div>
       </div>
 
-
+      {/* 🚀 Moved Rocket Animation to the Bottom of the Page */}
+      <div style={styles.spacer} />  {/* Added spacer to push animation down */}
       <motion.div variants={fadeInVariant} initial="hidden" animate="visible" style={styles.lottie}>
         <Lottie options={defaultOptions} height={100} width={100} />
       </motion.div>
@@ -124,13 +123,11 @@ const styles = {
     color: '#bbb',
     lineHeight: '1.6',
   },
-  contact: {
-    fontSize: '18px',
-    color: '#ddd',
-    marginTop: '30px',
+  spacer: {
+    height: '200px', // ✅ Pushes the animation closer to the bottom
   },
   lottie: {
-    marginTop: '20px',
+    marginBottom: '30px', // ✅ Moves animation closer to the bottom
   },
 };
 
