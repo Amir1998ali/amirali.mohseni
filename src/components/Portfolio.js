@@ -21,6 +21,13 @@ const projects = [
     github: 'https://github.com/Amir1998ali/ischatgptdown',
     website: 'https://ischatgptdown.xyz/',
   },
+  {
+    title: '🤖 Is ChatGPT Down?',
+    description:
+      'An AI-driven tool that lets users upload PDFs and ask GPT-4-powered questions in real-time. Built with FastAPI, Streamlit, and LangChain, it processes documents in-memory for instant, secure responses.',
+    github: 'https://github.com/Amir1998ali/pdf-qa-app',
+    website: 'https://pdf-question-and-answer.streamlit.app/',
+  },
 ];
 
 const Portfolio = () => {
