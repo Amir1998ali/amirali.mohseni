@@ -33,7 +33,7 @@ const projects = [
     description:
       'An AI-driven app that helps users discover the ideal career based on their selected skills. Built with Streamlit and TensorFlow, it offers real-time predictions in a user-friendly interface.',
     // Update this if you have a GitHub repo for the career predictor
-    github: 'https://github.com/Amir1998ali/career-predictor-app',
+    github: 'https://github.com/Amir1998ali/Career-c',
     website: 'https://amir1998ali-career-predicator-app-nocmeh.streamlit.app/',
   }
 ];
