@@ -22,13 +22,22 @@ const projects = [
     website: 'https://ischatgptdown.xyz/',
   },
   {
-    title: '🤖 Is ChatGPT Down?',
+    title: '📜 PDF QA Chat',
     description:
       'An AI-driven tool that lets users upload PDFs and ask GPT-4-powered questions in real-time. Built with FastAPI, Streamlit, and LangChain, it processes documents in-memory for instant, secure responses.',
     github: 'https://github.com/Amir1998ali/pdf-qa-app',
     website: 'https://pdf-question-and-answer.streamlit.app/',
   },
+  {
+    title: '🌊 Career Predictor',
+    description:
+      'An AI-driven app that helps users discover the ideal career based on their selected skills. Built with Streamlit and TensorFlow, it offers real-time predictions in a user-friendly interface.',
+    // Update this if you have a GitHub repo for the career predictor
+    github: 'https://github.com/Amir1998ali/career-predictor-app',
+    website: 'https://amir1998ali-career-predicator-app-nocmeh.streamlit.app/',
+  }
 ];
+
 
 const Portfolio = () => {
   return (
