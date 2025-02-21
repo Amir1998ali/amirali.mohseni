@@ -35,6 +35,12 @@ const projects = [
     // Update this if you have a GitHub repo for the career predictor
     github: 'https://github.com/Amir1998ali/Career-Predicator',
     website: 'https://amir1998ali-career-predicator-app-nocmeh.streamlit.app/',
+  }, 
+  {
+    title: '🚀 Loan Default Prediction',
+    description:
+      'An AI-driven app that predicts the likelihood of a loan default based on various applicant features. Built with Streamlit and TensorFlow, it offers real-time risk assessments in a user-friendly interface.',
+    github: 'https://github.com/Amir1998ali/Loan-Default',
   }
 ];
 
